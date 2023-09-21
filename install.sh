@@ -68,6 +68,13 @@ installSymfonyCLI() {
   sudo mv ~/.symfony5/bin/symfony /usr/local/bin/symfony
 }
 
+installNodeJS() {
+  echo -e "\n${Cyan} * Installing NodeJS.. ${Color_Off}"
+  sudo apt install -y unzip
+  curl -fsSL https://fnm.vercel.app/install | bash
+  export PATH="~/.local/share/fnm:$PATH"
+  fnm install --latest
+}
 
 finally () {
  # update
@@ -85,6 +92,7 @@ installPHP
 installComposer
 installMySQL
 installSymfonyCLI
+installNodeJS
 update
 finally
 
