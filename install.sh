@@ -42,6 +42,11 @@ installPHP() {
   sudo apt-get -qy install php php-common libapache2-mod-php php-curl php-dev php-gd php-gettext php-imagick php-intl php-mbstring php-mysql php-pear php-pspell php-recode php-xml php-zip
 }
 
+installGIT() {
+  echo -e "\n${Cyan} * Installing GIT.. ${Color_Off}"
+  sudo apt-get -qy install git
+}
+
 installMySQL() {
   # MySQL
   echo -e "\n${Cyan} * Installing MySQL.. ${Color_Off}"
@@ -66,6 +71,7 @@ finally () {
 
 # RUN
 update
+installGIT
 installPHP
 installMySQL
 update
