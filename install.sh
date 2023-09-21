@@ -34,7 +34,6 @@ update() {
   sudo apt-get -qq update -y
   sudo apt-get --fix-broken install --yes
   sudo apt-get list
-  sudo apt-get upgrade # upgrade to new versions
 }
 
 installPHP() {
