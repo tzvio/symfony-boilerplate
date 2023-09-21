@@ -33,8 +33,8 @@ update() {
   echo -e "\n${Purple} * Updating package repositories... ${Color_Off}"
   sudo apt-get -qq update -y
   sudo apt-get --fix-broken install --yes
-  sudo apt-get list --upgradable
-  # sudo apt-get upgrade # upgrade to new versions
+  sudo apt-get list
+  sudo apt-get upgrade # upgrade to new versions
 }
 
 installPHP() {
