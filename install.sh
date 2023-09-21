@@ -39,7 +39,7 @@ update() {
 installPHP() {
   # PHP and Modules
   echo -e "\n${Cyan} * Installing PHP and common Modules.. ${Color_Off}"
-  sudo apt-get -qy install php php-common libapache2-mod-php php-curl php-dev php-gd php-gettext php-imagick php-intl php-mbstring php-mysql php-pear php-pspell php-recode php-xml php-zip
+  sudo apt-get -qy install php php-intl php-pgsql php-mysql php-xsl php-amqp php-gd php-redis php-curl php-zip php-ssh2
 }
 
 installGIT() {
