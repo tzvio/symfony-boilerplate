@@ -62,6 +62,13 @@ installComposer() {
   sudo mv composer.phar /usr/local/bin/composer
 }
 
+installSymfonyCLI() {
+  echo -e "\n${Cyan} * Installing Symfony CLI.. ${Color_Off}"
+  wget https://get.symfony.com/cli/installer -O - | bash
+  sudo mv ~/.symfony5/bin/symfony /usr/local/bin/symfony
+}
+
+
 finally () {
  # update
  sudo apt update
@@ -77,6 +84,7 @@ installGIT
 installPHP
 installComposer
 installMySQL
+installSymfonyCLI
 update
 finally
 
