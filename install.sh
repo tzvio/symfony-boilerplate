@@ -16,7 +16,7 @@ Purple='\033[0;35m'       # Purple
 Cyan='\033[0;36m'         # Cyan
 
 # PASSOWRD
-PASS_MYSQL_ROOT=`sceret` 
+PASS_MYSQL_ROOT='secret'
 
 # Check if running as root  
 if [ "$(id -u)" != "0" ]; then  
