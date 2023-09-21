@@ -50,16 +50,10 @@ installGIT() {
 installMySQL() {
   # MySQL
   echo -e "\n${Cyan} * Installing MySQL.. ${Color_Off}"
+  sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password ${PASS_MYSQL_ROOT}" # new password for the MySQL root user
+  sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again password ${PASS_MYSQL_ROOT}" # repeat password for the MySQL root user
+
   sudo apt-get -qy install mysql-server mysql-client
-  sudo mysql_secure_installation <<EOF
-      $PASS_MYSQL_ROOT
-      y
-      y
-      y
-      y
-      y
-      y
-      EOF
   }
 
 installComposer() {
