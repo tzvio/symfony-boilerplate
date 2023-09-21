@@ -59,6 +59,11 @@ installMySQL() {
   DEBIAN_FRONTEND=noninteractive sudo apt-get -qy install mysql-server mysql-client
 }
 
+installComposer() {
+  echo -e "\n${Cyan} * Installing Composer.. ${Color_Off}"
+  wget https://raw.githubusercontent.com/composer/getcomposer.org/main/web/installer -O - -q | php
+  sudo mv composer.phar /usr/local/bin/composer
+}
 
 finally () {
  # update
@@ -73,6 +78,7 @@ finally () {
 update
 installGIT
 installPHP
+installComposer
 installMySQL
 update
 finally
