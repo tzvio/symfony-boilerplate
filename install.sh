@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install
-# wget --no-cache -O - https://raw.githubusercontent.com/tzvio/symfony-boilerplate//main/install.sh | bash
+# wget --no-cache -O - https://raw.githubusercontent.com/tzvio/symfony-boilerplate/main/install.sh | bash
 
 
 # Color Reset
